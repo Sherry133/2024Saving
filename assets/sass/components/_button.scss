@@ -1,0 +1,155 @@
+/* Button */
+
+input[type='submit'],
+input[type='reset'],
+input[type='button'],
+button,
+.button {
+	@include vendor('appearance', 'none');
+	@include vendor(
+		'transition',
+		'background-color #{_duration(transition)} ease-in-out, color #{_duration(transition)} ease-in-out'
+	);
+	border-radius: _size(element-height) / 0.7;
+	border: 0;
+	cursor: pointer !important;
+	display: inline-block;
+	font-weight: _font(weight-extrabold);
+	height: _size(element-height) / 0.7;
+	line-height: _size(element-height) / 0.7;
+	padding: 0 3em;
+	text-align: center;
+	text-decoration: none;
+	white-space: nowrap;
+	letter-spacing: _font(letter-spacing-heading);
+	text-transform: uppercase;
+	font-size: 0.7em;
+
+	&.icon {
+		&:before {
+			margin-right: 0.5em;
+		}
+	}
+
+	&.fit {
+		width: 100%;
+	}
+
+	&.small {
+		font-size: 0.6em;
+	}
+
+	&.large {
+		font-size: 1em;
+	}
+	&#contest-btn .small {
+		color: #fff;
+		font-size: 1.25em; /* Increase font size */
+		padding: 0.25em 0.75em; /* Adjust padding to maintain button size */
+		line-height: 1; /* Ensure text is vertically centered */
+		display: inline-block; /* Helps with vertical alignment */
+		box-sizing: border-box; /* Includes padding in element's total width and height */
+	}
+
+	&.disabled,
+	&:disabled {
+		@include vendor('pointer-events', 'none');
+		opacity: 0.25;
+	}
+}
+
+@mixin color-button($p: null) {
+	input[type='submit'],
+	input[type='reset'],
+	input[type='button'],
+	button,
+	.button {
+		background-image: linear-gradient(
+			to right,
+			#eb8585,
+			#656dba,
+			#4d5a90,
+			#7183cd,
+			#eb8585
+		);
+		background-size: 500%; // Adjusted to allow the gradient to move fully across
+		animation: background-animation 5s linear infinite alternate; // Removed alternate-reverse for smooth looping
+		box-shadow: inset 0 0 0 1px _palette($p, border);
+		color: _palette($p, 'border1') !important;
+
+		@keyframes background-animation {
+			0% {
+				background-position: 0% 0;
+			}
+			100% {
+				background-position: 100% 0;
+			}
+		}
+
+		&:hover {
+			@keyframes pulse {
+				0% {
+					transform: scale(1);
+				}
+				50% {
+					transform: scale(1.05);
+				}
+				100% {
+					transform: scale(1);
+				}
+			}
+			@include vendor('animation', 'pulse 1s ease-in-out infinite');
+			// @include vendor('transition', 'transform 0.2s ease-in-out');
+			// @include vendor('transform', 'scale(1.05)');
+		}
+
+		&:active {
+			background-color: _palette($p, 'border-bg-alt');
+		}
+
+		@if ($p == null) {
+			&.primary {
+				background-color: _palette(accent1, #127789);
+				color: _palette(accent1, fg-bold) !important;
+
+				&:hover {
+					box-shadow: 12px 12px 12px rgba(0, 0, 0, 0.1),
+						-10px -10px 1-px, #618f97;
+					// background-color: lighten(_palette(accent1, 'bg'), 5);
+				}
+
+				&:active {
+					background-color: lighten(_palette(accent1, 'bg'), 10);
+				}
+			}
+		} @else {
+			&.primary {
+				box-shadow: 0 0 3em 0 _palette(shadow);
+				// background-color: saturate(darken(_palette($p, bg), 5), 3);
+				// color: _palette($p, fg-bold) !important;
+
+				&.primary1 {
+					box-shadow: 0 0 3em 0 _palette(shadow);
+					// background-color: saturate(lighten(_palette($p, bg), 5), 3);
+					// color: _palette($p, 'fg') !important;
+
+					&:hover {
+						background-color: saturate(
+							lighten(_palette($p, border), 5),
+							3
+						);
+					}
+
+					&:active {
+						background-color: saturate(
+							darken(_palette($p, bg), 15),
+							5
+						);
+					}
+				}
+			}
+		}
+	}
+}
+
+@include color-button;
