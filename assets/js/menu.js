@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	// Define menu items with their respective URLs
 	const menuItems = [
 		{ label: 'Home', url: 'index.html' },
-		{ label: 'Getting Started', url: 'gettingStarted.html' },
+		{ label: 'Getting Started', url: 'gettingstarted.html' },
 		{ label: 'How it Works', url: 'howitworks.html' },
 		{ label: 'Security First', url: 'security.html' },
 		{ label: 'Achievements', url: 'achievements.html' },
