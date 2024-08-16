@@ -10,7 +10,6 @@ ul h3 {
 	font-size: 24px;
 	display: block;
 	text-align: center;
-	
 }
 
 .procedure {
@@ -46,3 +45,15 @@ ul h3 {
 .procedure:nth-of-type(5)::before {
 	color: #000;
 } /* Red */
+
+li::marker {
+	content: none;
+}
+
+@include breakpoint('<=xsmall') {
+	@media screen and (max-width: 480px) {
+		li::marker {
+			content: none;
+		}
+	}
+}
