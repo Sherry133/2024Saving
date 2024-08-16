@@ -1659,8 +1659,8 @@ button:disabled,
   .button input[type=button],
   .button button,
   .button .button {
-    font-size: 0.7em;
-    padding: 0.4em 1em;
+    font-size: 0.8em;
+    padding: 0.6em 1em;
   }
   input[type=submit] input[type=submit]#contest-btn.small,
   input[type=submit] input[type=reset]#contest-btn.small,
@@ -1689,7 +1689,7 @@ button:disabled,
   .button .button#contest-btn.small {
     font-size: 0.8em;
     padding: 0.3em 0.8em;
-    min-height: 2.2em;
+    min-height: 2.5em;
     margin-top: -2px;
     margin-bottom: 0;
     align-self: bottom;
@@ -2908,6 +2908,7 @@ header p {
 
 ul h3 {
   text-transform: capitalize;
+  text-align: center;
 }
 
 .fa-spinner.fa-spin.fa-3x {
@@ -2950,6 +2951,30 @@ ul h3 {
 .procedure:nth-of-type(5)::before {
   color: #000;
 } /* Red */
+li::marker {
+  content: none;
+}
+
+ul,
+ol {
+  padding-left: 0;
+}
+
+@media screen and (max-width: 480px) and (max-width: 480px) {
+  li::marker {
+    content: none;
+  }
+}
+@media screen and (max-width: 480px) {
+  ul li,
+  ol li {
+    list-style-type: none;
+  }
+  ul,
+  ol {
+    padding-left: 0;
+  }
+}
 .getting-started-procedures {
   counter-reset: procedure;
 }
@@ -3016,6 +3041,11 @@ li::marker {
   content: none;
 }
 
+@media screen and (max-width: 480px) and (max-width: 480px) {
+  li::marker {
+    content: none;
+  }
+}
 /* Spotlights */
 .spotlights {
   box-shadow: 0 0 2em 0 rgba(0, 0, 0, 0.1);
@@ -3146,7 +3176,7 @@ h3 {
 }
 
 article {
-  background-color: #f8f8f8;
+  background-color: #fff;
   border-radius: 8px;
   padding: 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -3172,7 +3202,7 @@ article {
 }
 
 .list-group li {
-  width: calc(50% - 10px);
+  width: calc(60% - 10px);
   margin-bottom: 10px;
   padding: 10px;
   border-radius: 4px;

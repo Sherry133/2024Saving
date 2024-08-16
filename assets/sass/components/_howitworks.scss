@@ -3,6 +3,7 @@
 }
 ul h3 {
 	text-transform: capitalize;
+	text-align: center;
 }
 
 .fa-spinner.fa-spin.fa-3x {
@@ -49,11 +50,23 @@ ul h3 {
 li::marker {
 	content: none;
 }
+ul,
+ol {
+	padding-left: 0;
+}
 
 @include breakpoint('<=xsmall') {
 	@media screen and (max-width: 480px) {
 		li::marker {
 			content: none;
 		}
+	}
+	ul li,
+	ol li {
+		list-style-type: none;
+	}
+	ul,
+	ol {
+		padding-left: 0;
 	}
 }
