@@ -17,7 +17,6 @@ header {
 
 	&.major {
 		text-align: center;
-		// color: blue;
 
 		> :first-child {
 			margin-top: -0.25em;
@@ -42,7 +41,7 @@ header {
 @mixin color-section($p: null) {
 	header {
 		p {
-			color: _palette($p, fg-light);
+			color: _palette($p, 'fg');
 		}
 	}
 }

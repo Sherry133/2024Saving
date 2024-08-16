@@ -43,7 +43,7 @@
 	@include breakpoint('<=xsmall') {
 		> * {
 			padding: 0;
-			background-color: #ffff00;
+			background-color: #fff;
 		}
 
 		> :first-child {

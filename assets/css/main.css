@@ -2680,7 +2680,7 @@ header.major.major-achievement {
 }
 
 header p {
-  color: rgba(67, 75, 86, 0.55);
+  color: rgba(44, 49, 56, 0.75);
 }
 
 /* Carousel */
@@ -2994,20 +2994,21 @@ ul h3 {
 .starting-procedure:nth-of-type(5)::before {
   color: #000;
 } /* Red */
-#main .fa-solid .fa-spinner p {
-  width: 80%;
+#main p {
+  width: 100%;
+  text-align: center;
 }
 
 #main .fa-solid.fa-apple-whole {
-  margin-right: 10px; /* Adjust this value as needed */
+  margin-right: 10px;
+  margin-bottom: 1em;
 }
 
 #main .fa-solid.fa-apple-whole + p:first-letter {
   display: block;
   color: #cb1318;
   font-size: 28px;
-  margin-block-start: 8px;
-  text-shadow: 0px 2px 5px #eeeeee;
+  margin-block-start: 10px;
   line-height: 0.7;
 }
 
@@ -3578,7 +3579,7 @@ article {
   border-top-color: rgba(255, 255, 255, 0.25);
 }
 .wrapper > .inner > .main.accent1 header p {
-  color: rgba(255, 255, 255, 0.55);
+  color: rgba(255, 255, 255, 0.75);
 }
 .wrapper > .inner > .main.accent2 {
   background-color: #656dba;
@@ -3862,7 +3863,7 @@ article {
   border-top-color: rgba(255, 255, 255, 0.25);
 }
 .wrapper > .inner > .main.accent2 header p {
-  color: rgba(255, 255, 255, 0.55);
+  color: rgba(255, 255, 255, 0.75);
 }
 .wrapper > .inner > .main.accent3 {
   background-color: #eb8585;
@@ -4146,7 +4147,7 @@ article {
   border-top-color: rgba(255, 255, 255, 0.25);
 }
 .wrapper > .inner > .main.accent3 header p {
-  color: rgba(255, 255, 255, 0.55);
+  color: rgba(255, 255, 255, 0.75);
 }
 .wrapper > .inner > .main.accent4 {
   background-color: hsl(197, 47%, 78%);
@@ -4430,7 +4431,7 @@ article {
   border-top-color: rgba(255, 255, 255, 0.25);
 }
 .wrapper > .inner > .main.accent4 header p {
-  color: rgba(255, 255, 255, 0.55);
+  color: rgba(255, 255, 255, 0.75);
 }
 @media screen and (max-width: 1680px) {
   .wrapper > .inner > .main {
@@ -5618,7 +5619,7 @@ body.is-preload #banner > .slider {
 @media screen and (max-width: 480px) {
   #page-wrapper > * {
     padding: 0;
-    background-color: #ffff00;
+    background-color: #fff;
   }
   #page-wrapper > :first-child {
     padding-top: 0;
