@@ -4493,7 +4493,7 @@ article {
   color: #adafbe;
   cursor: default;
   line-height: 1.5;
-  margin: -1em 0 1em 0;
+  margin: -2em 0 1em 0;
   position: relative;
   justify-content: space-between;
 }
@@ -5339,7 +5339,6 @@ body.is-menu-visible #menu {
   width: 60%;
   opacity: 1;
   position: relative;
-  aspect-ratio: 16/9;
 }
 #banner > .slider > article {
   transition: opacity 1.5s, visibility 1.5s;
@@ -5425,6 +5424,122 @@ body.is-preload #banner > .slider {
   #banner > .slider {
     height: 20em;
     max-height: 40vh;
+  }
+}
+@media screen and (max-width: 480px) and (max-width: 480px) and (orientation: landscape) {
+  #banner > .items {
+    -moz-flex-direction: row;
+    flex-direction: row;
+  }
+  #banner > .items section {
+    padding: 2em 2em 0.1em 2em;
+  }
+  #banner > .slider {
+    height: 15em;
+    max-height: 70vh;
+  }
+}
+@media screen and (max-width: 480px) and (max-width: 768px) and (orientation: landscape) {
+  #banner > .items {
+    -moz-flex-direction: row;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  #banner > .items section {
+    padding: 2em 2em 0.1em 2em;
+    flex-basis: calc(50% - 2em);
+    min-width: 250px;
+    max-width: 100%;
+  }
+  #banner > .slider {
+    height: 40vh;
+    min-height: 250px;
+    max-height: 400px;
+  }
+  #banner .slider-content {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+  #banner h2 {
+    font-size: 1.5em;
+  }
+  #banner p {
+    font-size: 0.9em;
+    line-height: 1.4;
+  }
+  #banner button,
+  #banner .button {
+    min-height: 44px;
+    min-width: 44px;
+    padding: 0.5em 1em;
+  }
+}
+@media screen and (max-width: 480px) and (max-width: 926px) and (orientation: landscape) {
+  #banner .container {
+    width: 95%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  #banner .header {
+    font-size: 2em;
+    text-align: left;
+  }
+  #banner .content {
+    font-size: 1em;
+    line-height: 1.5;
+    -moz-column-count: 2;
+         column-count: 2;
+    -moz-column-gap: 30px;
+         column-gap: 30px;
+  }
+  #banner .navigation {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #banner .nav-item {
+    margin: 0 10px;
+  }
+  #banner .image {
+    max-width: 100%;
+    height: auto;
+    min-height: 200px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    margin-left: 20px;
+  }
+  #banner .button {
+    width: auto;
+    padding: 10px 20px;
+    font-size: 0.9em;
+  }
+  #banner .clickable {
+    min-height: 36px;
+    min-width: 36px;
+  }
+  #banner .grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+  }
+  #banner > .slider {
+    height: 50vh;
+    max-height: 500px;
+  }
+  #banner > .items {
+    -moz-flex-direction: row;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  #banner > .items section {
+    flex: 0 0 auto;
+    width: 80%;
+    max-width: 400px;
+    margin-right: 20px;
+    padding: 2em 2em 0.1em 2em;
   }
 }
 

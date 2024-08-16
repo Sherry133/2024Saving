@@ -11,7 +11,7 @@
 		@include vendor('flex-grow', '0');
 		@include vendor('flex-shrink', '0');
 		width: 40%;
-		// aspect-ratio: 1/1;
+
 		section {
 			@include padding(5em, 6em);
 			@include vendor(
@@ -65,7 +65,6 @@
 		width: 60%;
 		opacity: 1;
 		position: relative;
-		aspect-ratio: 16/9;
 
 		> article {
 			@include vendor(
@@ -177,6 +176,146 @@
 		> .slider {
 			height: 20em;
 			max-height: 40vh;
+		}
+		// New media query for landscape orientation
+		@media screen and (max-width: 480px) and (orientation: landscape) {
+			> .items {
+				// Adjust flex-direction if needed for landscape
+				@include vendor('flex-direction', 'row');
+
+				section {
+					// Adjust padding for landscape if necessary
+					@include padding(2em, 2em);
+				}
+			}
+
+			> .slider {
+				// Adjust height for landscape
+				height: 15em;
+				max-height: 70vh; // Increase max-height for landscape
+			}
+		}
+
+		// New media query for landscape orientation
+		@media screen and (max-width: 768px) and (orientation: landscape) {
+			> .items {
+				@include vendor('flex-direction', 'row');
+				@include vendor('flex-wrap', 'wrap');
+				justify-content: space-around;
+
+				section {
+					@include padding(2em, 2em);
+					flex-basis: calc(50% - 2em);
+					min-width: 250px;
+					max-width: 100%;
+				}
+			}
+
+			> .slider {
+				height: 40vh;
+				min-height: 250px;
+				max-height: 400px;
+			}
+
+			// Additional improvements
+			.slider-content {
+				max-width: 90%;
+				margin: 0 auto;
+			}
+
+			h2 {
+				font-size: 1.5em;
+			}
+
+			p {
+				font-size: 0.9em;
+				line-height: 1.4;
+			}
+
+			// Improve touch targets for mobile
+			button,
+			.button {
+				min-height: 44px;
+				min-width: 44px;
+				padding: 0.5em 1em;
+			}
+		}
+		@media screen and (max-width: 926px) and (orientation: landscape) {
+			.container {
+				width: 95%;
+				max-width: 900px;
+				margin: 0 auto;
+				padding: 0 20px;
+			}
+
+			.header {
+				font-size: 2em;
+				text-align: left;
+			}
+
+			.content {
+				font-size: 1em;
+				line-height: 1.5;
+				column-count: 2;
+				column-gap: 30px;
+			}
+
+			.navigation {
+				flex-direction: row;
+				justify-content: space-between;
+				align-items: center;
+			}
+
+			.nav-item {
+				margin: 0 10px;
+			}
+
+			.image {
+				max-width: 100%; // Ensure the image takes the full width of its container
+				height: auto; // Maintain aspect ratio
+				min-height: 200px; // Set a minimum height to prevent scrunching
+				object-fit: cover; // Ensure the image covers the area without distortion
+				margin-left: 20px; // Add margin for spacing
+			}
+
+			.button {
+				width: auto;
+				padding: 10px 20px;
+				font-size: 0.9em;
+			}
+
+			// Improve touch targets while considering landscape orientation
+			.clickable {
+				min-height: 36px;
+				min-width: 36px;
+			}
+
+			// Adjust grid layouts for landscape
+			.grid {
+				grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+				gap: 20px;
+			}
+
+			// Specific adjustments for your slider if needed
+			> .slider {
+				height: 50vh; // Adjust this value as needed
+				max-height: 500px; // Increase max-height for better image display
+			}
+
+			> .items {
+				@include vendor('flex-direction', 'row');
+				@include vendor('flex-wrap', 'nowrap');
+				overflow-x: auto;
+				-webkit-overflow-scrolling: touch;
+
+				section {
+					flex: 0 0 auto;
+					width: 80%;
+					max-width: 400px;
+					margin-right: 20px;
+					@include padding(2em, 2em);
+				}
+			}
 		}
 	}
 }
