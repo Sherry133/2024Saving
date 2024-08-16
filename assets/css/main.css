@@ -1568,15 +1568,15 @@ button,
   cursor: pointer !important;
   display: inline-block;
   font-weight: 600;
-  height: 3.9285714286em;
-  line-height: 3.9285714286em;
-  padding: 0 3em;
+  height: auto;
+  line-height: 1.2;
+  padding: 0.5em 1.5em;
   text-align: center;
   text-decoration: none;
   white-space: nowrap;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  font-size: 0.7em;
+  font-size: 0.8em;
 }
 input[type=submit].icon:before,
 input[type=reset].icon:before,
@@ -1597,7 +1597,8 @@ input[type=reset].small,
 input[type=button].small,
 button.small,
 .button.small {
-  font-size: 0.6em;
+  font-size: 0.7em;
+  padding: 0.4em 1.2em;
 }
 input[type=submit].large,
 input[type=reset].large,
@@ -1606,17 +1607,19 @@ button.large,
 .button.large {
   font-size: 1em;
 }
-input[type=submit]#contest-btn .small,
-input[type=reset]#contest-btn .small,
-input[type=button]#contest-btn .small,
-button#contest-btn .small,
-.button#contest-btn .small {
-  color: #fff;
-  font-size: 1.25em; /* Increase font size */
-  padding: 0.25em 0.75em; /* Adjust padding to maintain button size */
-  line-height: 1; /* Ensure text is vertically centered */
-  display: inline-block; /* Helps with vertical alignment */
-  box-sizing: border-box; /* Includes padding in element's total width and height */
+input[type=submit]#contest-btn.small,
+input[type=reset]#contest-btn.small,
+input[type=button]#contest-btn.small,
+button#contest-btn.small,
+.button#contest-btn.small {
+  font-size: 0.9em;
+  padding: 0.4em 1em;
+  line-height: 1.2;
+  height: auto;
+  min-height: 2.5em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 input[type=submit].disabled, input[type=submit]:disabled,
 input[type=reset].disabled,
@@ -1629,6 +1632,128 @@ button:disabled,
 .button:disabled {
   pointer-events: none;
   opacity: 0.25;
+}
+@media (max-width: 480px) {
+  input[type=submit] input[type=submit],
+  input[type=submit] input[type=reset],
+  input[type=submit] input[type=button],
+  input[type=submit] button,
+  input[type=submit] .button,
+  input[type=reset] input[type=submit],
+  input[type=reset] input[type=reset],
+  input[type=reset] input[type=button],
+  input[type=reset] button,
+  input[type=reset] .button,
+  input[type=button] input[type=submit],
+  input[type=button] input[type=reset],
+  input[type=button] input[type=button],
+  input[type=button] button,
+  input[type=button] .button,
+  button input[type=submit],
+  button input[type=reset],
+  button input[type=button],
+  button button,
+  button .button,
+  .button input[type=submit],
+  .button input[type=reset],
+  .button input[type=button],
+  .button button,
+  .button .button {
+    font-size: 0.7em;
+    padding: 0.4em 1em;
+  }
+  input[type=submit] input[type=submit]#contest-btn.small,
+  input[type=submit] input[type=reset]#contest-btn.small,
+  input[type=submit] input[type=button]#contest-btn.small,
+  input[type=submit] button#contest-btn.small,
+  input[type=submit] .button#contest-btn.small,
+  input[type=reset] input[type=submit]#contest-btn.small,
+  input[type=reset] input[type=reset]#contest-btn.small,
+  input[type=reset] input[type=button]#contest-btn.small,
+  input[type=reset] button#contest-btn.small,
+  input[type=reset] .button#contest-btn.small,
+  input[type=button] input[type=submit]#contest-btn.small,
+  input[type=button] input[type=reset]#contest-btn.small,
+  input[type=button] input[type=button]#contest-btn.small,
+  input[type=button] button#contest-btn.small,
+  input[type=button] .button#contest-btn.small,
+  button input[type=submit]#contest-btn.small,
+  button input[type=reset]#contest-btn.small,
+  button input[type=button]#contest-btn.small,
+  button button#contest-btn.small,
+  button .button#contest-btn.small,
+  .button input[type=submit]#contest-btn.small,
+  .button input[type=reset]#contest-btn.small,
+  .button input[type=button]#contest-btn.small,
+  .button button#contest-btn.small,
+  .button .button#contest-btn.small {
+    font-size: 0.8em;
+    padding: 0.3em 0.8em;
+    min-height: 2.2em;
+    margin-top: -2px;
+    margin-bottom: 0;
+    align-self: bottom;
+  }
+}
+@media (min-width: 481px) and (max-width: 768px) {
+  input[type=submit] input[type=submit],
+  input[type=submit] input[type=reset],
+  input[type=submit] input[type=button],
+  input[type=submit] button,
+  input[type=submit] .button,
+  input[type=reset] input[type=submit],
+  input[type=reset] input[type=reset],
+  input[type=reset] input[type=button],
+  input[type=reset] button,
+  input[type=reset] .button,
+  input[type=button] input[type=submit],
+  input[type=button] input[type=reset],
+  input[type=button] input[type=button],
+  input[type=button] button,
+  input[type=button] .button,
+  button input[type=submit],
+  button input[type=reset],
+  button input[type=button],
+  button button,
+  button .button,
+  .button input[type=submit],
+  .button input[type=reset],
+  .button input[type=button],
+  .button button,
+  .button .button {
+    font-size: 0.75em;
+    padding: 0.45em 1.2em;
+  }
+  input[type=submit] input[type=submit]#contest-btn.small,
+  input[type=submit] input[type=reset]#contest-btn.small,
+  input[type=submit] input[type=button]#contest-btn.small,
+  input[type=submit] button#contest-btn.small,
+  input[type=submit] .button#contest-btn.small,
+  input[type=reset] input[type=submit]#contest-btn.small,
+  input[type=reset] input[type=reset]#contest-btn.small,
+  input[type=reset] input[type=button]#contest-btn.small,
+  input[type=reset] button#contest-btn.small,
+  input[type=reset] .button#contest-btn.small,
+  input[type=button] input[type=submit]#contest-btn.small,
+  input[type=button] input[type=reset]#contest-btn.small,
+  input[type=button] input[type=button]#contest-btn.small,
+  input[type=button] button#contest-btn.small,
+  input[type=button] .button#contest-btn.small,
+  button input[type=submit]#contest-btn.small,
+  button input[type=reset]#contest-btn.small,
+  button input[type=button]#contest-btn.small,
+  button button#contest-btn.small,
+  button .button#contest-btn.small,
+  .button input[type=submit]#contest-btn.small,
+  .button input[type=reset]#contest-btn.small,
+  .button input[type=button]#contest-btn.small,
+  .button button#contest-btn.small,
+  .button .button#contest-btn.small {
+    font-size: 0.85em;
+    padding: 0.35em 0.9em;
+    min-height: 2.3em;
+    align-self: center;
+  }
 }
 
 input[type=submit],
@@ -4339,6 +4464,7 @@ article {
   line-height: 1.5;
   margin: -1em 0 1em 0;
   position: relative;
+  justify-content: space-between;
 }
 #header .logo-container {
   display: flex;
@@ -4407,6 +4533,9 @@ article {
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
 }
+#header > nav ul li a[href="#menu"] .menu-text {
+  display: inline-block;
+}
 #header > nav ul li a[href="#menu"]:before {
   content: "\f0c9";
   float: right;
@@ -4433,10 +4562,10 @@ article {
 }
 @media screen and (max-width: 480px) and (max-width: 480px) {
   #header {
-    -moz-flex-direction: row;
-    flex-direction: row;
-    align-items: left;
-    margin: 2em 0 0.5em 0;
+    -moz-flex-direction: column;
+    flex-direction: column;
+    align-items: stretch;
+    margin: 1em 0 0.5em 0;
   }
   #header .logo-container {
     flex-direction: row;
@@ -4444,45 +4573,63 @@ article {
     margin-bottom: 1em;
   }
   #header .logo-container .logo {
-    height: 60px;
-    width: 104px;
+    height: 50px;
+    width: auto;
   }
   #header .logo-container span {
     display: none;
-    margin-left: 0;
-    margin-top: 0.5em;
-    text-align: center;
-    padding-bottom: 0;
   }
-}
-#header > nav {
-  font-size: 0.8em;
-}
-#header > nav ul {
-  margin: 1.25em 1em 0 0;
-}
-#header > nav ul li a {
-  padding: 1em;
-}
-#header > nav ul li a:hover {
-  background-color: transparent;
-}
-@media screen and (max-width: 480px) {
-  #header ul {
+  #header > nav {
+    font-size: 0.8em;
+    width: 100%;
+  }
+  #header > nav ul {
     margin: 0.5em 0;
     padding: 0;
     display: flex;
     flex-wrap: wrap;
-    justify-content: right;
+    justify-content: flex-end;
+    align-items: center;
   }
-  #header ul li {
-    margin: 0em 0.25em;
-    color: #fff;
+  #header > nav ul li {
+    margin: 0.25em;
   }
-  #header ul li a {
+  #header > nav ul li a {
     padding: 0.5em 0.75em;
-    display: block;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.5em;
+  }
+  #header > nav ul li#contest-btn {
+    width: 100%;
+    order: -1;
+    margin-bottom: 0.5em;
+  }
+  #header > nav ul li#contest-btn a {
+    width: 100%;
+    justify-content: center;
+  }
+  #header > nav ul li.login-button, #header > nav ul li:has(a[href="#menu"]) {
+    display: flex;
+  }
+  #header > nav ul li.login-button {
+    margin-right: 0.5em;
+  }
+  #header > nav ul li a[href="#menu"] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #header > nav ul li a[href="#menu"] .menu-text {
+    display: inline;
+    margin-right: 0.5em;
+  }
+  #header > nav ul li a[href="#menu"]:before {
+    content: none;
+  }
+  #header > nav ul li a[href="#menu"] i {
+    display: inline-block;
   }
 }
 

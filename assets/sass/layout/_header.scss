@@ -6,6 +6,7 @@
 	line-height: 1.5;
 	margin: -1em 0 1em 0;
 	position: relative;
+	justify-content: space-between;
 
 	.logo-container {
 		display: flex;
@@ -55,12 +56,16 @@
 					display: inline-block;
 					line-height: inherit;
 					padding: 0.5em 1em;
-					text-decoration: none; // Add this line to remove the underline
-					border-bottom: none; // Add this line to ensure no border is added
+					text-decoration: none;
+					border-bottom: none;
 					color: #ececec;
 
 					&[href='#menu'] {
 						@include icon(false, solid);
+
+						.menu-text {
+							display: inline-block;
+						}
 
 						&:before {
 							content: '\f0c9';
@@ -94,17 +99,15 @@
 
 			span {
 				display: block;
-				// font-size: 1em;
-				// top: 0;
 			}
 		}
 	}
 
 	@include breakpoint('<=xsmall') {
 		@media screen and (max-width: 480px) {
-			@include vendor('flex-direction', 'row');
-			align-items: left;
-			margin: 2em 0 0.5em 0;
+			@include vendor('flex-direction', 'column');
+			align-items: stretch;
+			margin: 1em 0 0.5em 0;
 
 			.logo-container {
 				flex-direction: row;
@@ -112,54 +115,77 @@
 				margin-bottom: 1em;
 
 				.logo {
-					height: 60px;
-					width: 104px;
+					height: 50px;
+					width: auto;
 				}
 
 				span {
 					display: none;
-					margin-left: 0;
-					margin-top: 0.5em;
-					text-align: center;
-					padding-bottom: 0;
 				}
 			}
-		}
-	}
 
-	> nav {
-		font-size: 0.8em;
+			> nav {
+				font-size: 0.8em;
+				width: 100%;
 
-		ul {
-			// margin: 1.25em;
-			margin: 1.25em 1em 0 0;
-			li {
-				a {
-					padding: 1em;
+				ul {
+					margin: 0.5em 0;
+					padding: 0;
+					display: flex;
+					flex-wrap: wrap;
+					justify-content: flex-end; // Align items to the right
+					align-items: center;
 
-					&:hover {
-						background-color: transparent;
+					li {
+						margin: 0.25em;
+
+						a {
+							padding: 0.5em 0.75em;
+							display: flex;
+							align-items: center;
+							justify-content: center;
+							height: 2.5em;
+						}
+
+						&#contest-btn {
+							width: 100%;
+							order: -1;
+							margin-bottom: 0.5em;
+
+							a {
+								width: 100%;
+								justify-content: center;
+							}
+						}
+
+						&.login-button,
+						&:has(a[href='#menu']) {
+							display: flex;
+						}
+
+						&.login-button {
+							margin-right: 0.5em;
+						}
+
+						a[href='#menu'] {
+							display: flex;
+							align-items: center;
+							justify-content: center;
+
+							.menu-text {
+								display: inline;
+								margin-right: 0.5em;
+							}
+
+							&:before {
+								content: none;
+							}
+
+							i {
+								display: inline-block;
+							}
+						}
 					}
-				}
-			}
-		}
-	}
-	@media screen and (max-width: 480px) {
-		ul {
-			margin: 0.5em 0; // Reduce vertical margins
-			padding: 0; // Remove default padding
-			display: flex; // Make the list horizontal
-			flex-wrap: wrap; // Allow wrapping for very small screens
-			justify-content: right; // Center the nav items
-
-			li {
-				margin: 0em 0.25em; // Add some space between items
-				color: #fff;
-
-				a {
-					padding: 0.5em 0.75em; // Reduce padding
-					display: block; // Ensure the entire area is clickable
-					text-align: center; // Center text within each nav item
 				}
 			}
 		}
