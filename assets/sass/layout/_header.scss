@@ -175,10 +175,14 @@
 							.menu-text {
 								display: inline;
 								margin-right: 0.5em;
+
 							}
 
 							&:before {
-								content: none;
+								content: '\f0c9';
+								float: right;
+								line-height: inherit;
+								margin-right: 0.75em;
 							}
 
 							i {
