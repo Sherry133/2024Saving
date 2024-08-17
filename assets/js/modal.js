@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     <a href="#" class="faq-link">How secure are deposits?</a>
 
                 <li class="faq-item" data-question="How do deposits get to the bank?"
-                    data-answer="Immediately after each bank session, a banking Deposit Report is created. Volunteers use the Deposit Report to balance School Savings deposits ensuring each deposit is accounted for that session. The lead Voluneer appointed by the parent teacher organization brings the Deposit Report and deposits to the participating bank branch.">
+                    data-answer="Immediately after each bank session, a banking Deposit Report is created. Volunteers use the Deposit Report to balance School Savings deposits ensuring each deposit is accounted for that session. The lead Volunteer appointed by the parent teacher organization brings the Deposit Report and deposits to the participating bank branch.">
                     <a href="#" class="faq-link">How do deposits get to the bank?</a>
                 </li>
                                 <li class="faq-item" data-question="Can withdrawals be made at school?"
