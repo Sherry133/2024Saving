@@ -1892,6 +1892,7 @@ button.primary:active,
 .features section h3 {
   color: #ececec;
   text-transform: capitalize;
+  font-family: "Inter", sans-serif;
 }
 .features section:hover {
   transform: translateY(-5px);
@@ -2975,6 +2976,21 @@ ol {
     padding-left: 0;
   }
 }
+@media screen and (max-width: 736px) and (max-width: 768px) {
+  li::marker {
+    content: none;
+  }
+}
+@media screen and (max-width: 736px) {
+  ul li,
+  ol li {
+    list-style-type: none;
+  }
+  ul,
+  ol {
+    padding-left: 0;
+  }
+}
 .getting-started-procedures {
   counter-reset: procedure;
 }
@@ -3044,6 +3060,31 @@ li::marker {
 @media screen and (max-width: 480px) and (max-width: 480px) {
   li::marker {
     content: none;
+  }
+}
+@media screen and (max-width: 480px) {
+  ul li,
+  ol li {
+    list-style-type: none;
+  }
+  ul,
+  ol {
+    padding-left: 0;
+  }
+}
+@media screen and (max-width: 736px) and (max-width: 768px) {
+  li::marker {
+    content: none;
+  }
+}
+@media screen and (max-width: 736px) {
+  ul li,
+  ol li {
+    list-style-type: none;
+  }
+  ul,
+  ol {
+    padding-left: 0;
   }
 }
 /* Spotlights */
@@ -3453,6 +3494,7 @@ article {
 .wrapper > .inner > .main.accent1 .features section h3 {
   color: #ececec;
   text-transform: capitalize;
+  font-family: "Inter", sans-serif;
 }
 .wrapper > .inner > .main.accent1 .features section:hover {
   transform: translateY(-5px);
@@ -3737,6 +3779,7 @@ article {
 .wrapper > .inner > .main.accent2 .features section h3 {
   color: #ececec;
   text-transform: capitalize;
+  font-family: "Inter", sans-serif;
 }
 .wrapper > .inner > .main.accent2 .features section:hover {
   transform: translateY(-5px);
@@ -4021,6 +4064,7 @@ article {
 .wrapper > .inner > .main.accent3 .features section h3 {
   color: #ececec;
   text-transform: capitalize;
+  font-family: "Inter", sans-serif;
 }
 .wrapper > .inner > .main.accent3 .features section:hover {
   transform: translateY(-5px);
@@ -4305,6 +4349,7 @@ article {
 .wrapper > .inner > .main.accent4 .features section h3 {
   color: #ececec;
   text-transform: capitalize;
+  font-family: "Inter", sans-serif;
 }
 .wrapper > .inner > .main.accent4 .features section:hover {
   transform: translateY(-5px);
@@ -5406,7 +5451,7 @@ body.is-preload #banner > .slider {
     padding: 3em 3em 1em 3em;
   }
   #banner > .items section h1 {
-    font-size: 1.25em;
+    font-size: 1.5em;
   }
   #banner > .slider {
     height: 30em;
