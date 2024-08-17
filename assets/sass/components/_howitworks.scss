@@ -70,3 +70,19 @@ ol {
 		padding-left: 0;
 	}
 }
+
+@include breakpoint('<=small') {
+	@media screen and (max-width: 768px) {
+		li::marker {
+			content: none;
+		}
+	}
+	ul li,
+	ol li {
+		list-style-type: none;
+	}
+	ul,
+	ol {
+		padding-left: 0;
+	}
+}

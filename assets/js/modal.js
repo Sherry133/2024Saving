@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     data-answer="Select a school or two. Contact School Savings at support@schoolsavings.com to register. There is only one bank sponsor per school. All bank accounts are at the sponsor's bank. Minimum deposit is $.01.">
                     <a href="#" class="faq-link">How do I get started?</a>
                 <li class="faq-item" data-question="Pricing"
-                    data-answer="Pricing is by school. All students in the school can participate for one annual school fee. Teachers and parents with children in School Savings may also make deposits at school. Request a quote with this link. https://ww2.schoolsavings.com/quote.html">
+                    data-answer="Reasonable pricing allows all students to participate. Teachers and parents with children in School Savings may also make deposits at school. Request a quote. https://ww2.schoolsavings.com/quote.html">
                     <a href="#" class="faq-link">How much does it cost?</a>
                 </li>
 
