@@ -237,11 +237,6 @@ var settings = {
 		}, 100);
 	});
 
-	//goldcoin loader
-	window.addEventListener('load', function () {
-		document.getElementById('loader').style.display = 'none';
-	});
-
 	// Fix: Object-fit (pseudo) polyfill.
 	if (!browser.canUse('object-fit'))
 		$('img[data-position]').each(function () {
