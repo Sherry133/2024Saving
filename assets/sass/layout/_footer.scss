@@ -10,7 +10,7 @@
 		text-transform: capitalize;
 	}
 	.links a {
-		border-bottom-color: transparent;
+		 border-bottom-color: transparent;
 		color: _palette(accent3, bgg);
 
 		&:hover {
@@ -66,6 +66,7 @@
 
 			a {
 				color: _palette(accent1, fg-light);
+				border-bottom-color: transparent;
 			}
 
 			&:before {

@@ -5686,6 +5686,7 @@ body.is-preload #banner > .slider {
 }
 #footer .contact-icons li a {
   color: rgba(255, 255, 255, 0.55);
+  border-bottom-color: transparent;
 }
 #footer .contact-icons li:before {
   color: #eb8585;
