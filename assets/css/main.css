@@ -2877,7 +2877,7 @@ header p {
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  overflow-wrap: break-word;
 }
 
 .modal-content {
@@ -2903,6 +2903,56 @@ header p {
   cursor: pointer;
 }
 
+/* Security Section */
+.security-section {
+  background-color: #fff;
+  padding: 2em 0;
+}
+
+.security-section .nacha h3 {
+  font-size: 2em;
+  color: #333;
+  text-align: center;
+  margin-bottom: 1.5em;
+}
+
+.content-block {
+  margin-bottom: 2em;
+  padding: 0 2em;
+}
+
+.content-block p {
+  font-size: 1em;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 1em;
+  display: flex;
+  align-items: flex-start;
+}
+
+.icon {
+  margin-right: 10px;
+  color: #cb1318;
+}
+
+.image.main {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 1.5em auto;
+}
+
+@media (max-width: 768px) {
+  .security-section {
+    padding: 1.5em 1em;
+  }
+  .content-block {
+    padding: 0 1em;
+  }
+  .content-block p {
+    font-size: 0.9em;
+  }
+}
 .deposit-procedures {
   counter-reset: procedure;
 }
@@ -3035,56 +3085,90 @@ ol {
 .starting-procedure:nth-of-type(5)::before {
   color: #000;
 } /* Red */
-#main p {
-  width: 100%;
+/* Testimonials Section */
+.testimonials {
+  background-color: #fff;
+  padding: 0 0 2em;
+}
+
+.wrapper .testimonials {
+  margin-top: -3em; /* Adjust as necessary */
+  margin-bottom: 0;
+}
+
+.testimonials h3 {
   text-align: center;
+  font-size: 2em;
+  margin-bottom: 1.5em;
 }
 
-#main .fa-solid.fa-apple-whole {
-  margin-right: 10px;
-  margin-bottom: 1em;
+.testimonial-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+  background-color: #fff;
 }
 
-#main .fa-solid.fa-apple-whole + p:first-letter {
-  display: block;
-  color: #cb1318;
-  font-size: 28px;
-  margin-block-start: 10px;
-  line-height: 0.7;
+.testimonial-list li {
+  display: flex;
+  align-items: flex-start;
 }
 
-li::marker {
-  content: none;
+.testimonial-list figure {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 1em;
 }
 
-@media screen and (max-width: 480px) and (max-width: 480px) {
-  li::marker {
-    content: none;
+.testimonial-list img {
+  border-radius: 50%;
+}
+
+.testimonial-list figcaption {
+  max-width: 80%;
+}
+
+.testimonial-list h4 {
+  margin: 0 0 0.5em 0;
+  font-size: 1.2em;
+  color: #333;
+}
+
+.testimonial-list p {
+  margin: 0 0 1em 0;
+  font-size: 1em;
+  color: #666;
+}
+
+/* Media Queries */
+/* General adjustment to reduce the gap before "Hear from our Clients" */
+.wrapper .testimonials {
+  margin-top: -2em; /* Adjust as necessary */
+  margin-bottom: 0;
+}
+
+/* Media query for screens < 768px */
+@media screen and (max-width: 768px) {
+  .wrapper .testimonials {
+    margin-top: -2em; /* Adjust as necessary */
+    margin-bottom: 0;
   }
 }
+/* Media query for screens < 480px */
 @media screen and (max-width: 480px) {
-  ul li,
-  ol li {
-    list-style-type: none;
+  .wrapper .testimonials {
+    margin-top: -1.5em; /* Adjust as necessary */
+    margin-bottom: 0;
   }
-  ul,
-  ol {
-    padding-left: 0;
+  h3 {
+    margin-top: 0.5em; /* Move h3 up */
   }
-}
-@media screen and (max-width: 736px) and (max-width: 768px) {
-  li::marker {
-    content: none;
-  }
-}
-@media screen and (max-width: 736px) {
-  ul li,
-  ol li {
-    list-style-type: none;
-  }
-  ul,
-  ol {
-    padding-left: 0;
+  .testimonial-list p {
+    padding-right: 0.5em;
   }
 }
 /* Spotlights */
@@ -3175,7 +3259,12 @@ li::marker {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
+  /* Set background to black */
   color: rgba(44, 49, 56, 0.75);
+}
+
+.page-wrapper {
+  background-color: #000;
 }
 
 h1 {
@@ -3356,17 +3445,19 @@ article {
 .wrapper {
   width: 100%;
   padding-bottom: 0;
-  background-color: #ececec;
+  background-color: #000;
 }
 .wrapper > .inner {
   width: 80em;
   max-width: 100%;
   margin-left: auto;
   margin-right: auto;
+  background-color: #000;
 }
 .wrapper > .inner > .main {
   padding: 6em 6em 4em 6em;
   background-color: #ffffff;
+  z-index: 1000;
 }
 .wrapper > .inner > .main.accent1 {
   background-color: #0b1f26;
@@ -5781,6 +5872,7 @@ body.is-preload #banner > .slider {
 #page-wrapper {
   overflow-x: hidden;
   width: 100%;
+  background-color: #000;
 }
 #page-wrapper > :first-child,
 #page-wrapper > :last-child {
@@ -5810,7 +5902,7 @@ body.is-preload #banner > .slider {
 @media screen and (max-width: 480px) {
   #page-wrapper > * {
     padding: 0;
-    background-color: #fff;
+    background-color: #000;
   }
   #page-wrapper > :first-child {
     padding-top: 0;

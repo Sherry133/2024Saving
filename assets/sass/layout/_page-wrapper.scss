@@ -1,16 +1,13 @@
 /* Page Wrapper */
-//not home page
+// Not home page
 #page-wrapper {
 	overflow-x: hidden;
 	width: 100%;
+	background-color: #000; // Set background to black
 
 	> :first-child,
 	> :last-child {
-		// background: rgba(44, 49, 56, 0.75);
-		// background-color: darken(_palette(accent1, bg), 4);
-		// background-color: #4e5266;
-		// background-color: darken(_palette(accent1, bg), 4);
-		background-color: #000;
+		background-color: #000; // Ensure consistent black background
 	}
 
 	> * {
@@ -43,7 +40,7 @@
 	@include breakpoint('<=xsmall') {
 		> * {
 			padding: 0;
-			background-color: #fff;
+			background-color: #000; // Ensure consistent black background on small screens
 		}
 
 		> :first-child {

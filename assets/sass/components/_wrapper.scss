@@ -3,17 +3,19 @@
 .wrapper {
 	width: 100%;
 	padding-bottom: 0;
-	// background-color: darken(_palette(accent1, bg), 4);
-	background-color: #ececec;
+	background-color: #000; // Set background to black
+
 	> .inner {
 		width: 80em;
 		max-width: 100%;
 		margin-left: auto;
 		margin-right: auto;
+		background-color: #000; // Set background to black to ensure consistency
 
 		> .main {
 			@include padding(6em, 6em);
 			background-color: _palette(bg);
+			z-index: 1000;
 
 			&.accent1 {
 				@include color(accent1);

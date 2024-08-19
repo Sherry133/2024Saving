@@ -3,8 +3,13 @@
 	max-width: 1200px;
 	margin: 0 auto;
 	padding: 20px;
+	/* Set background to black */
 	color: _palette(fg);
 }
+.page-wrapper {
+	background-color: #000;
+}
+
 h1 {
 	font-family: 'Poppins', sans-serif;
 }
@@ -16,6 +21,7 @@ h2 {
 	color: _palette(accent2, bg);
 	font-weight: bold;
 }
+
 h3 {
 	font-size: 24px;
 	line-height: 1.4;

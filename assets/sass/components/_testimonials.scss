@@ -1,52 +1,89 @@
-#main p {
-	width: 100%;
+/* Testimonials Section */
+.testimonials {
+	background-color: #fff;
+	padding: 0 0 2em;
+}
+// /* General adjustment to reduce the gap before "Hear from our Clients" */
+.wrapper .testimonials {
+	margin-top: -3em; /* Adjust as necessary */
+	margin-bottom: 0;
+}
+
+.testimonials h3 {
 	text-align: center;
+	font-size: 2em;
+	margin-bottom: 1.5em;
 }
 
-#main .fa-solid.fa-apple-whole {
-	margin-right: 10px;
-	margin-bottom: 1em;
+.testimonial-list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	gap: 1.5em;
+	background-color: #fff;
 }
 
-#main .fa-solid.fa-apple-whole + p:first-letter {
-	display: block;
-	color: #cb1318;
-	font-size: 28px;
-	margin-block-start: 10px;
-	line-height: 0.7;
+.testimonial-list li {
+	display: flex;
+	align-items: flex-start;
 }
 
-li::marker {
-	content: none;
+.testimonial-list figure {
+	margin: 0;
+	display: flex;
+	align-items: center;
+	gap: 1em;
 }
 
-@include breakpoint('<=xsmall') {
-	@media screen and (max-width: 480px) {
-		li::marker {
-			content: none;
-		}
-	}
-	ul li,
-	ol li {
-		list-style-type: none;
-	}
-	ul,
-	ol {
-		padding-left: 0;
+.testimonial-list img {
+	border-radius: 50%;
+}
+
+.testimonial-list figcaption {
+	max-width: 80%;
+}
+
+.testimonial-list h4 {
+	margin: 0 0 0.5em 0;
+	font-size: 1.2em;
+	color: #333;
+}
+
+.testimonial-list p {
+	margin: 0 0 1em 0;
+	font-size: 1em;
+	color: #666;
+}
+
+/* Media Queries */
+/* General adjustment to reduce the gap before "Hear from our Clients" */
+.wrapper .testimonials {
+	margin-top: -2em; /* Adjust as necessary */
+	margin-bottom: 0;
+}
+
+/* Media query for screens < 768px */
+@media screen and (max-width: 768px) {
+	.wrapper .testimonials {
+		margin-top: -2em; /* Adjust as necessary */
+		margin-bottom: 0;
 	}
 }
-@include breakpoint('<=small') {
-	@media screen and (max-width: 768px) {
-		li::marker {
-			content: none;
-		}
+
+/* Media query for screens < 480px */
+@media screen and (max-width: 480px) {
+	.wrapper .testimonials {
+		margin-top: -1.5em; /* Adjust as necessary */
+		margin-bottom: 0;
+
 	}
-	ul li,
-	ol li {
-		list-style-type: none;
+
+	h3 {
+		margin-top: 0.5em; /* Move h3 up */
 	}
-	ul,
-	ol {
-		padding-left: 0;
-	}
+	.testimonial-list p {
+padding-right: .5em;
+}
 }
