@@ -3,7 +3,7 @@
 .wrapper {
 	width: 100%;
 	padding-bottom: 0;
-	background-color: #000; // Set background to black
+	background-color: _palette(accent1, 'bg'); // Set background to black
 
 	> .inner {
 		width: 80em;
