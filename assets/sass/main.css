@@ -3349,30 +3349,6 @@ article {
   background-color: hsl(197, 47%, 78%);
 }
 
-.reveal {
-  position: relative;
-  transform: translateY();
-  opacity: 0;
-  transition: opacity 3s ease;
-}
-
-.reveal {
-  animation: fade-in linear forwards;
-  animation-timeline: view(contain);
-  animation-duration: 3s;
-  animation-delay: 0.25s;
-}
-
-@keyframes fade-in {
-  from {
-    scale: 0.5;
-    opacity: 0;
-  }
-  to {
-    scale: 1;
-    opacity: 1;
-  }
-}
 @media (max-width: 1680px) {
   .list-group li {
     width: 100%;
@@ -5199,7 +5175,7 @@ body.is-menu-visible #menu {
   background-color: black;
 }
 #banner > .items section.accent2 {
-  background-image: linear-gradient(to right, #935123, #7183cd, #656dba, #403f87);
+  background-image: linear-gradient(to right, #eb8585, #7183cd, #656dba, #403f87);
 }
 #banner > .items section.accent2 input[type=submit],
 #banner > .items section.accent2 input[type=reset],
@@ -5274,7 +5250,7 @@ body.is-menu-visible #menu {
   background-color: #3c4497;
 }
 #banner > .items section.accent3 {
-  background-image: linear-gradient(to right, #935123, #7183cd, #656dba, #403f87);
+  background-image: linear-gradient(to right, #eb8585, #7183cd, #656dba, #403f87);
 }
 #banner > .items section.accent3 input[type=submit],
 #banner > .items section.accent3 input[type=reset],

@@ -35,7 +35,7 @@
 				background-image: linear-gradient(
 					to right,
 
-					#eb8585,
+					#935123,
 					#7183cd,
 					#656dba,
 					#403f87
@@ -44,8 +44,15 @@
 			}
 
 			&.accent3 {
-				@include color-typography(accent3);
-				@include color-button(accent3);
+				background-image: linear-gradient(
+					to right,
+
+					#935123,
+					#7183cd,
+					#656dba,
+					#403f87
+				);
+				@include color-button(accent2);
 			}
 
 			&.accent4 {

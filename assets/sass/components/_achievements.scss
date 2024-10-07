@@ -91,6 +91,30 @@ article {
 .list-group li:nth-child(even) {
 	background-color: _palette(accent3, bgg);
 }
+.reveal {
+	position: relative;
+	transform: translateY();
+	opacity: 0;
+	transition: opacity 3s ease;
+}
+
+.reveal {
+	animation: fade-in linear forwards;
+	animation-timeline: view(contain);
+	animation-duration: 3s;
+	animation-delay: 0.25s;
+}
+
+@keyframes fade-in {
+	from {
+		scale: 0.5;
+		opacity: 0;
+	}
+	to {
+		scale: 1;
+		opacity: 1;
+	}
+}
 
 @media (max-width: 1680px) {
 	.list-group li {
