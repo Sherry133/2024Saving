@@ -332,14 +332,12 @@ $vendor-values: (
 				)};
 		}
 	}
-	@elseif $expandValue {
+	@if $expandValue {
 		@each $vendor in $vendor-prefixes {
-			#{$property}: #{str-replace-all($value, '-prefix-', $vendor)};
+		  #{$property}: #{replace($value, '-prefix-', $vendor)};
 		}
-	}
-
-	// Neither? Treat them as a normal declaration.
-	@else {
-		#{$property}: #{$value};
-	}
+	
+	  } @else {
+		#{$property}: #{$value}; // Correctly set the property and value
+	  }
 }

@@ -1753,6 +1753,7 @@ button:disabled,
     padding: 0.35em 0.9em;
     min-height: 2.3em;
     align-self: center;
+    background-image: linear-gradient(to right, #db0b0b, #656dba, #4d5a90, #7183cd, #db0b0b);
   }
 }
 
@@ -1762,6 +1763,7 @@ input[type=button],
 button,
 .button {
   background-image: linear-gradient(to right, #935123, #656dba, #4d5a90, #7183cd, #935123);
+  background-image: linear-gradient(to right, #db0b0b, #656dba, #4d5a90, #7183cd, #db0b0b);
   background-size: 500%;
   animation: background-animation 5s linear infinite alternate;
   box-shadow: inset 0 0 0 1px #577b9e;
@@ -3076,7 +3078,7 @@ ol {
 .starting-procedure:nth-of-type(2)::before {
   color: #00ff00;
 } /* Green */
-.starting-proceduree:nth-of-type(3)::before {
+.starting-procedure:nth-of-type(3)::before {
   color: #0000ff;
 } /* Blue */
 .starting-procedure:nth-of-type(4)::before {
@@ -3531,7 +3533,7 @@ article {
   background-size: 500%;
   animation: background-animation 5s linear infinite alternate;
   box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.25);
-  color: !important;
+  color: white!important;
 }
 @keyframes background-animation {
   0% {
@@ -3816,7 +3818,7 @@ article {
   background-size: 500%;
   animation: background-animation 5s linear infinite alternate;
   box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.25);
-  color: !important;
+  color: white !important;
 }
 @keyframes background-animation {
   0% {
@@ -4101,7 +4103,7 @@ article {
   background-size: 500%;
   animation: background-animation 5s linear infinite alternate;
   box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.25);
-  color: !important;
+  color: white !important;
 }
 @keyframes background-animation {
   0% {
@@ -4386,7 +4388,7 @@ article {
   background-size: 500%;
   animation: background-animation 5s linear infinite alternate;
   box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.25);
-  color: !important;
+  color: white !important;
 }
 @keyframes background-animation {
   0% {
@@ -4894,7 +4896,7 @@ article {
   background-size: 500%;
   animation: background-animation 5s linear infinite alternate;
   box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.25);
-  color: !important;
+  color: white !important;
 }
 @keyframes background-animation {
   0% {
@@ -4996,7 +4998,7 @@ article {
   right: 0;
   text-align: right;
   top: 0;
-  vertical-align: middle;
+  /* vertical-align: middle; */
   width: 7em;
 }
 #menu .close:before {
@@ -5135,7 +5137,7 @@ body.is-menu-visible #menu {
   background-size: 500%;
   animation: background-animation 5s linear infinite alternate;
   box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.25);
-  color: !important;
+  color: white !important;
 }
 @keyframes background-animation {
   0% {
@@ -5199,18 +5201,18 @@ body.is-menu-visible #menu {
   background-color: black;
 }
 #banner > .items section.accent2 {
-  background-image: linear-gradient(to right, #935123, #7183cd, #656dba, #403f87);
+  background-image: linear-gradient(to right, #6e0404, #db0b0b, #177656, #68ba65, #7877d0);
 }
 #banner > .items section.accent2 input[type=submit],
 #banner > .items section.accent2 input[type=reset],
 #banner > .items section.accent2 input[type=button],
 #banner > .items section.accent2 button,
 #banner > .items section.accent2 .button {
-  background-image: linear-gradient(to right, #935123, #656dba, #4d5a90, #7183cd, #935123);
+  background-image: linear-gradient(to right, #db0b0b, #656dba, #4d5a90, #7183cd, #db0b0b);
   background-size: 500%;
   animation: background-animation 5s linear infinite alternate;
   box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.25);
-  color: !important;
+  color: white !important;
 }
 @keyframes background-animation {
   0% {
@@ -5285,7 +5287,7 @@ body.is-menu-visible #menu {
   background-size: 500%;
   animation: background-animation 5s linear infinite alternate;
   box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.25);
-  color: !important;
+  color: white!important;
 }
 @keyframes background-animation {
   0% {
@@ -5393,7 +5395,7 @@ body.is-menu-visible #menu {
   background-size: 500%;
   animation: background-animation 5s linear infinite alternate;
   box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.25);
-  color: !important;
+  color:white !important;
 }
 @keyframes background-animation {
   0% {

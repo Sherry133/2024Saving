@@ -3,22 +3,25 @@
 #banner {
 	@include vendor('display', 'flex');
 	@include vendor('flex-direction', 'row');
-	background-color: darken(_palette(accent1, bg), 15);
+	// background-color: darken(_palette(accent1, bg), 15);
 
 	> .items {
-		@include vendor('display', 'flex');
-		@include vendor('flex-direction', 'column');
-		@include vendor('flex-grow', '0');
-		@include vendor('flex-shrink', '0');
+		// @include vendor('display', 'flex');
+		// @include vendor('flex-direction', 'column');
+		// @include vendor('flex-grow', '0');
+		// @include vendor('flex-shrink', '0');
 		width: 40%;
 
-		section {
-			@include padding(5em, 6em);
-			@include vendor(
-				'transition',
-				('opacity 0.5s ease-in-out', 'transform 0.5s ease-in-out')
-			);
 
+		.sherry {
+			@include padding(5em, 6em);
+			background-color: red;;
+			// @include vendor(
+			// 	'transition',
+			// 	('opacity 0.5s ease-in-out', 'transform 0.5s ease-in-out')
+			// );
+
+		
 			h1 {
 				font-size: 1.75em;
 				color: white;
@@ -26,15 +29,15 @@
 			p {
 				color: white;
 			}
+	
 
-			&.accent1 {
-				@include color-typography(accent1);
-				@include color-button(accent1);
-			}
-			&.accent2 {
-				background-image: linear-gradient(
-					to right,
+			// &.accent1 {
+			// 	@include color-typography(accent1);
+			// 	@include color-button(accent1);
+			// }
+		
 
+<<<<<<< HEAD
 					#935123,
 					#7183cd,
 					#656dba,
@@ -54,11 +57,28 @@
 				);
 				@include color-button(accent2);
 			}
+=======
+				// background-image: linear-gradient(
+				// 	 to right,
 
-			&.accent4 {
-				@include color-typography(accent4);
-				@include color-button(accent4);
+				// 	#d00909,
+				// 	#139a23,
+				// 	#65ba88,
+				// 	#6664c8
+				// );
+				// @include color-button(accent2);
 			}
+
+			// &.accent3 {
+			// 	@include color-typography(accent3);
+			// 	@include color-button(accent3);
+			// }
+>>>>>>> ef72231 (christmas site)
+
+			// &.accent4 {
+			// 	@include color-typography(accent4);
+			// 	@include color-button(accent4);
+			// }
 		}
 	}
 
@@ -117,7 +137,7 @@
 		}
 	}
 
-	body.is-preload & {
+	body.is-preload  {
 		> .slider {
 			opacity: 0;
 		}
@@ -325,4 +345,4 @@
 			}
 		}
 	}
-}
+

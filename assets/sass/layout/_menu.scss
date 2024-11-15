@@ -33,11 +33,10 @@
 	z-index: _misc(z-index-base) + 2;
 	background-image: linear-gradient(
 		45deg,
-		#403f87,
-		#656dba,
-		#e08585,
-		#7f85b8,
-		#adafbe
+		#d00909,
+		#139a23,
+		#65ba88,
+		#6664c8
 	);
 
 	> ul {
@@ -90,7 +89,7 @@
 		right: 0;
 		text-align: right;
 		top: 0;
-		vertical-align: middle;
+		// vertical-align: middle;
 		width: 7em;
 
 		&:before {

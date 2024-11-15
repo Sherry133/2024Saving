@@ -6,6 +6,7 @@ ul.actions {
 	list-style: none;
 	margin-left: (_size(element-margin) * -0.5);
 	padding-left: 0;
+	
 
 	li {
 		padding: 0 0 0 (_size(element-margin) * 0.5);
@@ -16,13 +17,15 @@ ul.actions {
 		@include vendor('justify-content', 'center');
 		width: 100%;
 		margin-left: 0;
+	
+	}
 
 		li {
 			&:first-child {
 				padding-left: 0;
 			}
 		}
-	}
+	
 
 	&.stacked {
 		@include vendor('flex-direction', 'column');

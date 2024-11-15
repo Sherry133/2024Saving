@@ -58,7 +58,7 @@
 					padding: 0.5em 1em;
 					text-decoration: none;
 					border-bottom: none;
-					color: #ececec;
+					color: #db0b0b;
 
 					&[href='#menu'] {
 						@include icon(false, solid);
@@ -78,7 +78,7 @@
 					&:hover {
 						background-color: _palette(accent2, border-bg);
 						border-radius: _size(border-radius);
-						color: _palette(accent3, bg);
+						color: white;
 					}
 				}
 			}
